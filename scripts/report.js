@@ -18,7 +18,7 @@ async function main() {
 function dealData(data, patchId_) {
   return data.results.map(({command, mean}) => ({
     projectName: getProjectInfo(command)[0],
-    displayName: `${getProjectInfo(command)[0]}(${getProjectInfo(command)[1]})`,
+    displayName: getProjectInfo(command)[0],
     benchmark: `${getProjectInfo(command)[1]}_${getBenchmark(input)}`,
     techStack,
     rawValue: parseFloat(mean.toFixed(2)),

@@ -12,18 +12,18 @@ jobs:
     strategy:
       matrix:
         metrics: [
-            "10 20 20 0",
-            "10 20 100 0",
-            "10 20 200 0",
+            # "10 20 20 0",
+            # "10 20 100 0",
+            # "10 20 200 0",
             "100 20 20 0", 
             "100 20 100 0",
-            "100 20 200 0",
-            "10 20 0 20", 
-            "10 20 0 100",
-            "10 20 0 200",
+            # "100 20 200 0",
+            # "10 20 0 20", 
+            # "10 20 0 100",
+            # "10 20 0 200",
             "100 20 0 20", 
             "100 20 0 100",
-            "100 20 0 200",
+            # "100 20 0 200",
             ]
         tests: [
         "'pnpm run test:jasmine'", 
@@ -41,12 +41,17 @@ jobs:
         "'pnpm run test:mocha-parallel'",
         "'pnpm run test:ava-parallel'",
         "'pnpm run test:tapjs-parallel'", 
+        "'pnpm run test:jasmine-serial'", 
         "'pnpm run test:jest-serial'", 
         "'pnpm run test:vitest-serial'", 
+        "'pnpm run test:mocha-serial'", 
+        "'pnpm run test:qunit-serial'", 
         "'pnpm run test:ava-serial'", 
-        "'pnpm run test:tapjs-serial'",
-        # "'pnpm run test:vitest-forks'", 
-        # "'pnpm run test:vitest-no-isolate'", 
+        "'pnpm run test:tape-serial'", 
+        "'pnpm run test:tapjs-serial'", 
+        "'pnpm run test:uvu-serial'", 
+        "'pnpm run test:vitest-forks'", 
+        "'pnpm run test:vitest-no-isolate'", 
         ]
         os: [ubuntu-latest]
     runs-on:  ${{ matrix.os }}
