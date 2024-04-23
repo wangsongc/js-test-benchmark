@@ -1,3 +1,5 @@
+// import os from "os"
+
 export default {
 	"files": [
         "**/tests/functions/*.test.js"
@@ -5,7 +7,8 @@ export default {
     // "match": [
     //     "*.test.js"
     // ],
-    // "concurrency": 4,
+    // "concurrency": os.cpus().length,
+    "concurrency": 4,
     "failFast": true,
     "failWithoutAssertions": false,
     // "environmentVariables": {

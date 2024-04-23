@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --no-cache",
+    "test": "jest",
     "test:better": "jest --config ./jest.better.config.js --cache --maxWorkers=4",
-    "test:inline": "jest"
+    "test:inline": "jest --runInBand "
   },
   "keywords": [],
   "author": "",
